@@ -9,7 +9,9 @@
     "email": "gon@cult.me",
     "url": ""
   },
-  "dependencies": {},
+  "dependencies": {
+    "request": "^2.34.0"
+  },
   "devDependencies": {
     "grunt-connect-rewrite": "~0.1.1",
     "grunt-contrib-jasmine": "~0.5.2"
