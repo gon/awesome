@@ -17,7 +17,9 @@
     %script(type='text/javascript' src='vendor/moment.min.js')
     %script(type='text/javascript' src='data/mock.jsonp')
     %script(type='text/javascript' src='js/helpers.js')
+    %script(type='text/javascript' src='vendor/instafeed.min.js')
     %script(type='text/javascript' src='js/main.js')
+
 
     %meta(name='HandheldFriendly' content='true')
     %meta(name='viewport' content='initial-scale = 1.0')
@@ -26,16 +28,16 @@
 
   %body
     .main-container
-      %section.content-container.content-container-quarter
+      %section.content-container
         %div.utilization
           %span ??%
         %div.marker(style="height: 48%")
           %span profitable
         %div.marker(style="height: 80%")
           %span great&nbsp;happiness
-      %section.content-container.content-container-quarter
-      %section.content-container.content-container-half
       %section.content-container
+      %section.content-container
+      %section.content-container#instafeed
 
   %script(type="text/javascript")
     $('a, h1, h2, section').each(function(i, el) {

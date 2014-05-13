@@ -3,15 +3,17 @@ var DASHBOARD = {};
 var noWidth = '',
   fullWidth = 'content-container-full',
   halfWidth = 'content-container-half',
-  quarterWidth = 'content-container-quarter';
+  quarterWidth = 'content-container-quarter',
+  instagramClientID = '876ca70bdd8741e299c56b3a4d88c9ed';
 
 (function(ns){
 
   ns.rotateLayouts = function ($sections, layouts) {
-    for(var i = 0; i < $sections.length; i++) {
-      var rand = Math.floor(Math.random() * layouts.length),
-        layout = layouts[rand],
-        $section = $($sections[i]);
+    var rand = Math.ceil(Math.random() * layouts.length),
+      layout = layouts[rand];
+    console.log(layout);
+    for(var i = 0; i < 4; i++) {
+      var $section = $($sections[i]);
 
       $section.removeClass(fullWidth).removeClass(halfWidth).removeClass(quarterWidth);
       $section.addClass(layout[i]);
@@ -46,15 +48,23 @@ $(document).ready(function(){
       [quarterWidth, quarterWidth, halfWidth, noWidth],
       [quarterWidth, quarterWidth, noWidth, halfWidth],
       [quarterWidth, noWidth, quarterWidth, halfWidth],
-      [ noWidth,quarterWidth, quarterWidth, halfWidth],
+      [noWidth, quarterWidth, quarterWidth, halfWidth],
 
       [quarterWidth, quarterWidth, quarterWidth, quarterWidth]
     ];
 
   var intervalFunction = function () {
     DASHBOARD.rotateLayouts($sections, layouts);
-  }
-  setInterval(intervalFunction, 15000);
+  };
+  intervalFunction();
+//  setInterval(intervalFunction, 4000);
+
+  var feed = new Instafeed({
+    get: 'tagged',
+    tagName: 'neoinnovate',
+    clientId: instagramClientID
+  });
+  feed.run();
 
 });
 
