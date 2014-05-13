@@ -138,7 +138,8 @@ function updateCalendar() {
           dayOfWeek: moment(event.start).format('ddd'),
           time: moment(event.start).format('h:mma').replace('m', ''),
           summary: event.summary,
-          location: event.location
+          location: event.location,
+          home: event.location.toLowerCase() == 'neo'
         };
         var attendees = [
           'ps ar dt'.split(' '),
