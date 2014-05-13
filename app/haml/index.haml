@@ -28,7 +28,7 @@
 
   %body
     .main-container
-      %section.content-container
+      %section.content-container.et
         %div.utilization
           %span ??%
         %div.marker(style="height: 48%")
@@ -41,26 +41,7 @@
 
   %script(type="text/javascript")
     $('a, h1, h2, section').each(function(i, el) {
+      // if (el.hasClass('et')) return
       $(el).css('background', '#' + Math.floor(Math.random()*16777215).toString(16).substring(3));
       -#$(el).css('border-right', '1px solid #ddd');
     });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
