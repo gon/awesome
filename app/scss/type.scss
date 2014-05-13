@@ -1,0 +1,63 @@
+
+$secondary-font-size: 0.6875em; // Secondary Text: 11px
+$primary-font-size: 0.875em; // Primary Text: 14px
+$title-font-size: 2.3125em; // Title: 37px
+$header-font-size: 1.4375em; // Headlines: 23px
+$sub-header-font-size: 1.125em; // Sub-headlines: 18px
+
+body {
+  font-size: $primary-font-size;
+}
+
+h1 {
+  font-size: $title-font-size
+}
+
+h2 {
+  font-size: $header-font-size;
+}
+
+h3 {
+  font-size: $sub-header-font-size;
+}
+
+h4 {
+  font-size: $sub-header-font-size;
+}
+
+h5 {
+  font-size: $secondary-font-size;
+}
+
+h6 {
+  font-size: $secondary-font-size;
+}
+
+figcaption {
+  font-size: $sub-header-font-size;
+}
+
+// phone
+@media screen and (max-width: 30em ) {
+  body {
+    // line-height: 1.375em;
+  }
+}
+
+// tablet
+@media only screen and (max-width: 64em) {
+
+  body {
+    // line-height: 1.5em;
+  }
+
+  h1 {
+  }
+
+  h2 {
+  }
+
+  h3 {
+  }
+
+}

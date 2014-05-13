@@ -1,0 +1,39 @@
+/* line 8, ../scss/type.scss */
+body {
+  font-size: 0.875em;
+}
+
+/* line 12, ../scss/type.scss */
+h1 {
+  font-size: 2.3125em;
+}
+
+/* line 16, ../scss/type.scss */
+h2 {
+  font-size: 1.4375em;
+}
+
+/* line 20, ../scss/type.scss */
+h3 {
+  font-size: 1.125em;
+}
+
+/* line 24, ../scss/type.scss */
+h4 {
+  font-size: 1.125em;
+}
+
+/* line 28, ../scss/type.scss */
+h5 {
+  font-size: 0.6875em;
+}
+
+/* line 32, ../scss/type.scss */
+h6 {
+  font-size: 0.6875em;
+}
+
+/* line 36, ../scss/type.scss */
+figcaption {
+  font-size: 1.125em;
+}

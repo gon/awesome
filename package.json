@@ -1,0 +1,17 @@
+{
+  "name": "awesome-dashboard",
+  "title": "awesome dashboard",
+  "description": "awesome dashboard",
+  "version": "0.1.0",
+  "homepage": "",
+  "author": {
+    "name": "Neo",
+    "email": "gon@cult.me",
+    "url": ""
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "grunt-connect-rewrite": "~0.1.1",
+    "grunt-contrib-jasmine": "~0.5.2"
+  }
+}

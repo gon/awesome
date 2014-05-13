@@ -1,0 +1,413 @@
+$header-height: 75px;
+
+// legacy
+$header-height-tablet: 40px;
+$header-margin-top: 15px;
+$header-margin-bottom: 15px;
+$header-margin-tablet-top: 5px;
+$header-margin-tablet-bottom: 5px;
+
+@mixin row {
+  margin: .5em;
+  padding: 0 1em;
+  overflow: hidden;
+  height: 1%;
+  *zoom: 1;
+  min-height: 1%;
+}
+
+@mixin flush-row {
+  overflow: hidden;
+  height: 1%;
+  *zoom: 1;
+  min-height: 1%;
+}
+
+@mixin center {
+  max-width: 60em;
+  margin: 0 auto;
+}
+
+// columns with margin
+@mixin unit {
+  margin:0 2%;
+  padding:0;
+  float:left;
+  position:relative;
+}
+
+@mixin unit12 {
+  @include unit;
+  width:96%;
+}
+
+@mixin unit11 {
+  @include unit;
+  width:87.66%;
+}
+
+@mixin unit10 {
+  @include unit;
+  width:79.33%;
+}
+
+@mixin unit9 {
+  @include unit;
+  width:71%;
+}
+
+@mixin unit8 {
+  @include unit;
+  width:62.66%;
+}
+
+@mixin unit7 {
+  @include unit;
+  width:54.33%;
+}
+
+@mixin unit6 {
+  @include unit;
+  width:46%;
+}
+
+@mixin unit5 {
+  @include unit;
+  width:37.66%;
+}
+
+@mixin unit4 {
+  @include unit;
+  width:29.33%;
+}
+
+@mixin unit3 {
+  @include unit;
+  width:21%;
+}
+
+@mixin unit2 {
+  @include unit;
+  width:12.66%;
+}
+
+@mixin unit1 {
+  @include unit;
+  width:4.33%;
+}
+
+// offset with margin
+
+@mixin offset12 {
+  margin-left:100%;
+}
+
+@mixin offset11 {
+  margin-left:93.66%;
+}
+
+@mixin offset10 {
+  margin-left:85.33%;
+}
+
+@mixin offset9 {
+  margin-left:77%;
+}
+
+@mixin offset8 {
+  margin-left:68.66%;
+}
+
+@mixin offset7 {
+  margin-left:60.33%;
+}
+
+@mixin offset6 {
+  margin-left:52%;
+}
+
+@mixin offset5 {
+  margin-left:43.66%;
+}
+
+@mixin offset4 {
+  margin-left:35.33%;
+}
+
+@mixin offset3 {
+  margin-left:27%;
+}
+
+@mixin offset2 {
+  margin-left:18.66%;
+}
+
+@mixin offset1 {
+  margin-left:10.33%;
+}
+
+// columns without margin
+  
+@mixin unit-no-gutter{
+  padding: 0 2.5em;
+  margin-top: 0;
+  margin-bottom: 0;
+}  
+   
+@mixin flush-unit {
+  margin:0;
+  padding:0;
+  float:left;
+  position:relative;
+}
+
+@mixin flush-unit12 {
+  @include flush-unit;
+  width:100%;
+}
+
+@mixin flush-unit11 {
+  @include flush-unit;
+  width:91.66%;
+}
+
+@mixin flush-unit10 {
+  @include flush-unit;
+  width:83.33%;
+}
+
+@mixin flush-unit9 {
+  @include flush-unit;
+  width:75%;
+}
+
+@mixin flush-unit8 {
+  @include flush-unit;
+  width:66.66%;
+}
+
+@mixin flush-unit7 {
+  @include flush-unit;
+  width:58.33%;
+}
+
+@mixin flush-unit6 {
+  @include flush-unit;
+  width:50%;
+}
+
+@mixin flush-unit5 {
+  @include flush-unit;
+  width:41.66%;
+}
+
+@mixin flush-unit4 {
+  @include flush-unit;
+  width:33.33%;
+}
+
+@mixin flush-unit3 {
+  @include flush-unit;
+  width:25%;
+}
+
+@mixin flush-unit2 {
+  @include flush-unit;
+  width:16.66%;
+}
+
+@mixin flush-unit1 {
+  @include flush-unit;
+  width:8.33%;
+}
+
+// offset columns without margin
+   
+@mixin flush-offset12 {
+  margin-left:100%;
+}
+
+@mixin flush-offset11 {
+  margin-left:91.66%;
+}
+
+@mixin flush-offset10 {
+  margin-left:83.33%;
+}
+
+@mixin flush-offset9 {
+  margin-left:75%;
+}
+
+@mixin flush-offset8 {
+  margin-left:66.66%;
+}
+
+@mixin flush-offset7 {
+  margin-left:58.33%;
+}
+
+@mixin flush-offset6 {
+  margin-left:50%;
+}
+
+@mixin flush-offset5 {
+  margin-left:41.66%;
+}
+
+@mixin flush-offset4 {
+  margin-left:33.33%;
+}
+
+@mixin flush-offset3 {
+  margin-left:25%;
+}
+
+@mixin flush-offset2 {
+  margin-left:16.66%;
+}
+
+@mixin flush-offset1 {
+  margin-left:8.33%;
+}
+
+
+
+
+
+// Units with vertical margin spacing
+
+// columns with margin
+@mixin v-unit {
+  margin:0.5em 2%;
+  padding:0;
+  float:left;
+  position:relative;
+}
+
+@mixin v-unit12 {
+  @include v-unit;
+  width:96%;
+}
+
+@mixin v-unit11 {
+  @include v-unit;
+  width:87.66%;
+}
+
+@mixin v-unit10 {
+  @include v-unit;
+  width:79.33%;
+}
+
+@mixin v-unit9 {
+  @include v-unit;
+  width:71%;
+}
+
+@mixin v-unit8 {
+  @include v-unit;
+  width:62.66%;
+}
+
+@mixin v-unit7 {
+  @include v-unit;
+  width:54.33%;
+}
+
+@mixin v-unit6 {
+  @include v-unit;
+  width:46%;
+}
+
+@mixin v-unit5 {
+  @include v-unit;
+  width:37.66%;
+}
+
+@mixin v-unit4 {
+  @include v-unit;
+  width:29.33%;
+}
+
+@mixin v-unit3 {
+  @include v-unit;
+  width:21%;
+}
+
+@mixin v-unit2 {
+  @include v-unit;
+  width:12.66%;
+}
+
+@mixin v-unit1 {
+  @include v-unit;
+  width:4.33%;
+}
+   
+@mixin flush-v-unit {
+  margin:0.5em;
+  padding:0;
+  float:left;
+  position:relative;
+}
+
+@mixin flush-v-unit12 {
+  @include flush-v-unit;
+  width:100%;
+}
+
+@mixin flush-v-unit11 {
+  @include flush-v-unit;
+  width:91.66%;
+}
+
+@mixin flush-v-unit10 {
+  @include flush-v-unit;
+  width:83.33%;
+}
+
+@mixin flush-v-unit9 {
+  @include flush-v-unit;
+  width:75%;
+}
+
+@mixin flush-v-unit8 {
+  @include flush-v-unit;
+  width:66.66%;
+}
+
+@mixin flush-v-unit7 {
+  @include flush-v-unit;
+  width:58.33%;
+}
+
+@mixin flush-v-unit6 {
+  @include flush-v-unit;
+  width:50%;
+}
+
+@mixin flush-v-unit5 {
+  @include flush-v-unit;
+  width:41.66%;
+}
+
+@mixin flush-v-unit4 {
+  @include flush-v-unit;
+  width:33.33%;
+}
+
+@mixin flush-v-unit3 {
+  @include flush-v-unit;
+  width:25%;
+}
+
+@mixin flush-v-unit2 {
+  @include flush-v-unit;
+  width:16.66%;
+}
+
+@mixin flush-v-unit1 {
+  @include flush-v-unit;
+  width:8.33%;
+}
