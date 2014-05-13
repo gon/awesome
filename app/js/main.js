@@ -57,7 +57,7 @@ $(document).ready(function(){
     DASHBOARD.rotateLayouts($sections, layouts);
   };
   intervalFunction();
-//  setInterval(intervalFunction, 4000);
+  setInterval(intervalFunction, 4000);
 
   var feed = new Instafeed({
     get: 'tagged',
