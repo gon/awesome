@@ -68,10 +68,9 @@ $(document).ready(function(){
 
 });
 
-updateUtilization()
+$(updateUtilization)
 
 function updateUtilization() {
-  console.log('hi')
   var headers = {
     Authorization: 'gXhP9wJ-n_DLG6ZLMwx8'
   }
@@ -101,4 +100,54 @@ function updateUtilization() {
     $('.utilization span').text(upercent)
     $('.utilization').css({ height: upercent })
   }
+}
+
+$(updateCalendar);
+setTimeout(updateCalendar, 60 * 1000 * 1000)
+function updateCalendar() {
+  var options = {
+    url: 'http://localhost:8001',
+    success: onData,
+    error: onError,
+    dataType: 'json'
+  }
+  $.ajax(options)
+    function onError(xhr, textStatus, errorThrown) {
+    console.log('error', textStatus, errorThrown)
+    console.log(xhr.responseXML, xhr.responseText)
+  }
+  function onData(data) {
+    // console.log('xondata', data)
+
+    var events = _.sortBy(data, function(event) { return event.start; });
+    events = _.map(events, function(event) {
+      event.end = new Date(event.end);
+      return event
+    })
+    events = _.filter(events, function(event) { return event.end >= new Date(); });
+
+    var result = [];
+    var counter = 0;
+    var maxEntries = 6
+    events.forEach(function(event) {
+      if (counter < maxEntries) {
+        counter++;
+        var evt = {
+          month: moment(event.start).format('MMMM'),
+          date: moment(event.start).format('DD'),
+          dayOfWeek: moment(event.start).format('ddd'),
+          time: moment(event.start).format('h:mm a'),
+          summary: event.summary,
+          location: event.location
+        };
+        result.push(evt);
+      }
+    });
+    insertEvents(result)
+  }
+  function insertEvents(events) {
+    events.forEach(function(e) {
+      console.log('ie', e);
+    });
+  };
 }
