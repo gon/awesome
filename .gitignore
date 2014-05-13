@@ -31,3 +31,5 @@ app/assets/*/*-s*.png
 .DS_Store
 
 .sass-cache
+/app/css
+/app/index.html
