@@ -26,3 +26,27 @@
     width: 25%;
   }
 }
+
+.utilization, .marker {
+  position: absolute;
+  bottom: 0;
+  border-top: 1px solid black;
+  width: 100px;
+  font-size: 125%;
+}
+
+.utilization span,
+.marker span {
+  position: absolute;
+  top: -0.5em;
+  line-height: 1em;
+  left: 110px;
+}
+
+.utilization span {
+  font-size: 4em
+}
+
+.marker span {
+  font-style: 2em
+}
