@@ -27,6 +27,12 @@
   %body
     .main-container
       %section.content-container
+        %div.utilization
+          %span ??%
+        %div.marker(style="height: 48%")
+          %span profitable
+        %div.marker(style="height: 80%")
+          %span great&nbsp;happiness
       %section.content-container
       %section.content-container
       %section.content-container
@@ -36,7 +42,7 @@
       $(el).css('background', '#' + Math.floor(Math.random()*16777215).toString(16).substring(3));
       -#$(el).css('border-right', '1px solid #ddd');
     });
-      
+
 
 
 
