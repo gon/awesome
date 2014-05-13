@@ -57,7 +57,7 @@ $(document).ready(function(){
     DASHBOARD.rotateLayouts($sections, layouts);
   };
   intervalFunction();
-  setInterval(intervalFunction, 4000);
+  // setInterval(intervalFunction, 4000);
 
   var feed = new Instafeed({
     get: 'tagged',
@@ -111,8 +111,14 @@ function updateUtilization() {
   }
 }
 
-$(updateCalendar);
+$(function() {
+  window.eventsDiv = $('.event-items');
+  window.template = $('.event-item.template').clone().removeClass('template')
+  // $('.event-item.template').remove()
+  updateCalendar()
+});
 setTimeout(updateCalendar, 60 * 1000 * 1000)
+
 function updateCalendar() {
   var options = {
     url: 'http://localhost:8001',
@@ -167,8 +173,25 @@ function updateCalendar() {
     insertEvents(result)
   }
   function insertEvents(events) {
+    eventsDiv.html('')
     events.forEach(function(e) {
-      console.log('ie', e);
+      t = template.clone()
+
+      t.find('.event-item-date').text(e.dayOfWeek + ' ' + e.month + '/' + e.date)
+      t.find('.event-item-title').text(e.summary)
+      t.find('.event-item-time').text(e.time)
+
+      if (e.home) t.addClass('home')
+
+      peopleList = t.find('.event-item-attendees')
+      var person = t.find('.event-item-attendee').clone()
+      peopleList.html('')
+      e.attendees && e.attendees.forEach(function(initials) {
+        peopleList.append(person.clone().text(initials))
+      })
+      console.log('template', t.html())
+      console.log('ed', eventsDiv)
+      eventsDiv.append(t)
     });
   };
 }
