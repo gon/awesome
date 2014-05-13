@@ -1,12 +1,69 @@
-/* line 1, ../scss/content.scss */
+/* line 8, ../scss/type.scss */
+body {
+  font-size: 0.875em;
+}
+
+/* line 12, ../scss/type.scss */
+h1 {
+  font-size: 2.3125em;
+}
+
+/* line 16, ../scss/type.scss */
+h2 {
+  font-size: 1.4375em;
+}
+
+/* line 20, ../scss/type.scss */
+h3 {
+  font-size: 1.125em;
+}
+
+/* line 24, ../scss/type.scss */
+h4 {
+  font-size: 1.125em;
+}
+
+/* line 28, ../scss/type.scss */
+h5 {
+  font-size: 0.6875em;
+}
+
+/* line 32, ../scss/type.scss */
+h6 {
+  font-size: 0.6875em;
+}
+
+/* line 36, ../scss/type.scss */
+figcaption {
+  font-size: 1.125em;
+}
+
+/* line 9, ../scss/content.scss */
 .main-container {
   width: 100%;
   height: 100%;
 }
 
-/* line 6, ../scss/content.scss */
+/* line 14, ../scss/content.scss */
 .content-container {
-  width: 25%;
+  width: 0%;
   height: 100%;
   float: left;
+  -webkit-transition: width 1s 1s;
+  -webkit-transition-delay: ease-in;
+  -moz-transition: width 1s 1s ease-in;
+  -o-transition: width 1s 1s ease-in;
+  transition: width 1s 1s ease-in;
+}
+/* line 19, ../scss/content.scss */
+.content-container.content-container-full {
+  width: 100%;
+}
+/* line 22, ../scss/content.scss */
+.content-container.content-container-half {
+  width: 50%;
+}
+/* line 25, ../scss/content.scss */
+.content-container.content-container-quarter {
+  width: 25%;
 }
