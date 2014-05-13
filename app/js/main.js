@@ -128,18 +128,29 @@ function updateCalendar() {
 
     var result = [];
     var counter = 0;
-    var maxEntries = 6
+    var maxEntries = 8
     events.forEach(function(event) {
       if (counter < maxEntries) {
         counter++;
         var evt = {
-          month: moment(event.start).format('MMMM'),
+          month: (moment(event.start).month() + 1) + '',
           date: moment(event.start).format('DD'),
           dayOfWeek: moment(event.start).format('ddd'),
-          time: moment(event.start).format('h:mm a'),
+          time: moment(event.start).format('h:mma').replace('m', ''),
           summary: event.summary,
           location: event.location
         };
+        var attendees = [
+          'ps ar dt'.split(' '),
+          'ps dt'.split(' '),
+          'dt'.split(' '),
+          'ps dt'.split(' '),
+          'dt'.split(' '),
+          ''.split(' '),
+          'ar'.split(' '),
+        ]
+        evt.attendees = attendees[result.length]
+
         result.push(evt);
       }
     });
