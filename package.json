@@ -10,7 +10,7 @@
     "url": ""
   },
   "dependencies": {
-    "request": "^2.34.0"
+    "ical": "^0.2.0"
   },
   "devDependencies": {
     "grunt-connect-rewrite": "~0.1.1",
