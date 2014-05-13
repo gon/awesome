@@ -27,26 +27,36 @@
   }
 }
 
+.et {
+  background: #222 url("/assets/images/ETTrans87.png") 14% 65% no-repeat;
+}
+
 .utilization, .marker {
+  color: #5bbeee;
   position: absolute;
   bottom: 0;
   border-top: 1px solid black;
-  width: 100px;
-  font-size: 125%;
+  width: 70px;
+  font-size: 200%;
 }
+
+.utilization {
+  background-color: #5bbeee;
+}
+
 
 .utilization span,
 .marker span {
   position: absolute;
   top: -0.5em;
   line-height: 1em;
-  left: 110px;
+  left: 80px;
 }
-
 .utilization span {
-  font-size: 4em
+  font-size: 5em;
+  left: 90px;
 }
 
 .marker span {
-  font-style: 2em
+  font-style: 3em;
 }
