@@ -33,3 +33,5 @@ app/assets/*/*-s*.png
 .sass-cache
 /app/css
 /app/index.html
+app/css
+app/index.html
