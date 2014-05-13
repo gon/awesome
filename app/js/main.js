@@ -62,10 +62,19 @@ $(document).ready(function(){
   var feed = new Instafeed({
     get: 'tagged',
     tagName: 'neoinnovate',
-    clientId: instagramClientID
+    clientId: instagramClientID,
+    resolution: 'standard_resolution',
+    limit: 200,
+    template: '<a href="{{link}}"><img src="{{image}}" class="instagram-image" /></a>',
+    after: function() {
+      setTimeout(function(){
+        var $instafeedElement = $('#instafeed'),
+          pictures = $instafeedElement.html();
+        $instafeedElement.append(pictures);
+      }, 200);
+    }
   });
   feed.run();
-
 });
 
 updateUtilization()

@@ -9,6 +9,8 @@
 .main-container {
   width: 100%;
   height: 100%;
+  background: $dark-grey-color;
+  letter-spacing: 0.175em;
 }
 
 .content-container {
@@ -18,19 +20,107 @@
   position: relative;
   overflow: hidden;
   @include transition(width 1s 1s ease-in);
+  text-align: center;
   &.content-container-full {
     width: 100%;
+    .instagram-image {
+      width: 12.5%;
+    }
   }
   &.content-container-half {
     width: 50%;
+    .instagram-image {
+      width: 25%;
+    }
   }
   &.content-container-quarter {
     width: 25%;
+    .instagram-image {
+      width: 50%;
+    }
+  }
+  &.content-container-light {
+    background: $light-grey-color;
+  }
+  &.content-container-dark {
+    background: $dark-grey-color;
+  }
+  .content-container-header {
+    text-transform: uppercase;
+    text-align: center;
+    width: 100%;
+    line-height: 3rem;
+    font-size: 1.5rem;
   }
 }
 
 .et {
   background: #222 url("/assets/images/ETTrans87.png") 14% 65% no-repeat;
+}
+
+@mixin pipedrive-image {
+  display: block;
+  margin: 2rem auto;
+  width: 40%;
+}
+
+.pipedrive-pizza {
+  @include pipedrive-image;
+}
+
+.pipedrive-pie {
+  @include pipedrive-image;
+}
+
+ul.event-items {
+
+}
+li.event-item {
+  height: 3rem;
+}
+.event-item-head {
+  float: left;
+  height: 4rem;
+  display: block;
+  margin-left: 1rem;
+
+}
+.event-item-date {
+  color: $type-light-grey;
+  font-size: 1rem;
+  line-height: 1rem;
+  text-align: left;
+}
+.event-item-title {
+  color: white;
+  font-size: 1.5rem;
+  line-height: 2.75rem;
+}
+.event-item-time {
+  float: left;
+  color: $type-light-grey;
+  font-size: 1.5rem;
+  line-height: 4rem;
+  margin-left: 1rem;
+
+}
+ul.event-item-attendees {
+  float: left;
+  line-height: 3rem;
+  overflow: hidden;
+  margin-left: 1rem;
+}
+li.event-item-attendee {
+  float: left;
+  background-color: $grey-shadow-color;
+  @include border-radius(4rem);
+  margin-left: 0.75rem;
+  font-size: 0.5rem;
+  line-height: 2rem;
+  margin-top: 0.75rem;
+  width: 2rem;
+  display: inline;
+
 }
 
 .utilization, .marker {

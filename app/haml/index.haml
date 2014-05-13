@@ -28,20 +28,35 @@
 
   %body
     .main-container
-      %section.content-container.et
+      %section.content-container.et.content-container-dark
+        %header.content-container-header Utilization
         %div.utilization
           %span ??%
         %div.marker(style="height: 48%")
           %span profitable
         %div.marker(style="height: 80%")
           %span great&nbsp;happiness
-      %section.content-container
-      %section.content-container
-      %section.content-container#instafeed
+      %section.content-container.content-container-light
+        %header.content-container-header Events
+          %ul.event-items
+            %li.event-item
+              .event-item-head
+                .event-item-date Mon 5/13
+                .event-item-title Code for America
+              .event-item-time 6:00p
+              %ul.event-item-attendees
+                %li.event-item-attendee GZ
+                %li.event-item-attendee AT
+                %li.event-item-attendee AZ
+      %section.content-container.content-container-dark
+        %header.content-container-header Pipedrive
+        %img(class='pipedrive-pizza' src='assets/images/Pizza7.png')
+        %img(class='pipedrive-pie' src='assets/images/Pie3.png')
+      %section.content-container#instafeed.content-container-light
+        %header.content-container-header= '#neoinnovate'
 
   %script(type="text/javascript")
     $('a, h1, h2, section').each(function(i, el) {
-      // if (el.hasClass('et')) return
-      $(el).css('background', '#' + Math.floor(Math.random()*16777215).toString(16).substring(3));
-      -#$(el).css('border-right', '1px solid #ddd');
+    -#$(el).css('background', '#' + Math.floor(Math.random()*16777215).toString(16).substring(3));
+    -#$(el).css('border-right', '1px solid #ddd');
     });
