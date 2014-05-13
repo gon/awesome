@@ -77,6 +77,12 @@ ul.event-items {
 }
 li.event-item {
   height: 3rem;
+  overflow: hidden; /* TODO stop hiding attendees when title is too long */
+  padding-top: 0rem;
+  padding-bottom: 4rem;
+  margin-top: 1rem;
+  border-bottom: 4px solid rgba(0,0,0,.25);
+  text-align: left;
 }
 .event-item-head {
   float: left;
@@ -111,6 +117,7 @@ ul.event-item-attendees {
   margin-left: 1rem;
 }
 li.event-item-attendee {
+  text-align: center;
   float: left;
   background-color: $grey-shadow-color;
   @include border-radius(4rem);

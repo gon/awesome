@@ -187,11 +187,12 @@ function updateCalendar() {
       var person = t.find('.event-item-attendee').clone()
       peopleList.html('')
       e.attendees && e.attendees.forEach(function(initials) {
-        peopleList.append(person.clone().text(initials))
+        console.log('add', initials)
+        peopleList.append(person.text(initials))
+        person = person.clone()
       })
-      console.log('template', t.html())
-      console.log('ed', eventsDiv)
       eventsDiv.append(t)
+      console.log(e)
     });
   };
 }
