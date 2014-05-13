@@ -184,7 +184,7 @@ function updateCalendar() {
       if (e.home) t.addClass('home')
 
       peopleList = t.find('.event-item-attendees')
-      var person = t.find('.event-item-attendee').clone()
+      var person = t.find('.event-item-attendee').first().clone()
       peopleList.html('')
       e.attendees && e.attendees.forEach(function(initials) {
         console.log('add', initials)
