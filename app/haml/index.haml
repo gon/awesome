@@ -8,6 +8,7 @@
 
     %link(rel='stylesheet' type='text/css' href='vendor/normalize.css' media='screen' charset='utf-8')
     %link(rel='stylesheet' type='text/css' href='css/main.css' media='screen' charset='utf-8')
+    %link(rel='stylesheet' type='text/css' href='css/content.css' media='screen' charset='utf-8')
     %link(rel='stylesheet' type='text/css' href='css/responsive.css' media='screen' charset='utf-8')
 
     %script(type='text/javascript' src='vendor/modernizr.js')
@@ -25,6 +26,16 @@
 
   %body
     .main-container
+      %section.content-container
+      %section.content-container
+      %section.content-container
+      %section.content-container
+
+  %script(type="text/javascript")
+    $('a, h1, h2, section').each(function(i, el) {
+      $(el).css('background', '#' + Math.floor(Math.random()*16777215).toString(16).substring(3));
+      -#$(el).css('border-right', '1px solid #ddd');
+    });
       
 
 
